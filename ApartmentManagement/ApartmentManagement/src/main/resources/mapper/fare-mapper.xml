@@ -9,7 +9,7 @@
 
 
     <select id="selectFare" resultType="Fare">
-        SELECT stu_id,stu_name,water_number*water_price as water_cost,electric_number*electric_price as electric_cost
+        SELECT stu_id,stu_name,water_number as water_cost,electric_number as electric_cost
         FROM student,fare
         WHERE 1 = 1
         <if test="stuId != null and stuId !=''">
