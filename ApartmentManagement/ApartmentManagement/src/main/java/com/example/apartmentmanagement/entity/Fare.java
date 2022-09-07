@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 public class Fare {
     private String stuId;
     private String stuName;
-    private Double waterNumber;
-    private Double electricNumber;
+    private Double waterCost;
+    private Double electricCost;
 
 }
