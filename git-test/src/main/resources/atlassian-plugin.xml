@@ -5,7 +5,7 @@
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
     </plugin-info>
 
-    <servlet name="git-test" class="org.example.ExampleServlet" key="test">
+    <servlet name="git-test" class="com.rt.ExampleServlet" key="test">
         <url-pattern>/test</url-pattern>
     </servlet>
 </atlassian-plugin>

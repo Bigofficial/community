@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.example</groupId>
+    <groupId>com.rt</groupId>
     <artifactId>git-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -15,7 +15,7 @@
     </organization>
 
     <name>git-test</name>
-    <description>This is the org.example:git-test plugin for Atlassian Bamboo.</description>
+    <description>This is the com.rt:git-test plugin for Atlassian Bamboo.</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
