@@ -12,5 +12,7 @@ public class GitTest {
         System.out.println("hot hot hot");
         System.out.println("hot hot hot");
         System.out.println("master master master");
+
+        System.out.println("asdasd");
     }
 }
