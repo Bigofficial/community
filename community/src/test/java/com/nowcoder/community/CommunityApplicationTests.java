@@ -1,7 +1,11 @@
 package com.nowcoder.community;
 
 import com.nowcoder.community.dao.AlphaDao;
+import com.nowcoder.community.dao.MessageMapper;
+import com.nowcoder.community.entity.Message;
 import com.nowcoder.community.service.AlphaService;
+import com.nowcoder.community.service.MessageService;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -21,6 +26,12 @@ import java.util.Date;
 public class CommunityApplicationTests implements ApplicationContextAware {
 
 	private ApplicationContext applicationContext;
+
+	@Autowired
+	private MessageService messageService;
+
+	@Autowired
+	private MessageMapper messageMapper;
 
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) {
@@ -55,5 +66,18 @@ public class CommunityApplicationTests implements ApplicationContextAware {
 	@Test
 	public void testDI(){
 		System.out.println(alphaDao);
+	}
+
+
+	@Test
+	public void testSerializer(){
+		List<Message> comment = messageMapper.selectLettersVersion2("comment", 0, 100);
+		System.out.println("isempty:"+comment.isEmpty());
+		for (Message message : comment) {
+			String content = message.getContent();
+			System.out.println(content);
+			System.out.println("=====");
+			System.out.println(message);
+		}
 	}
 }
