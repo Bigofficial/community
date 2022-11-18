@@ -5,6 +5,12 @@ $(function(){
 function publish() {
 	$("#publishModal").modal("hide");
 
+	// //发送ajax之前，发送csrf令牌。
+	// var token = $("meta[name='_csrf']").attr("content");
+	// var header = $("meta[name='_csrf_header']").attr("content");
+	// $(document).ajaxSent(function (e, xhr, options){
+	// 	xhr.setRequestHeader(header, token);
+	// });
 	//获取标题 内容
 	var title = $("#recipient-name").val();
 	var content = $("#message-text").val();
